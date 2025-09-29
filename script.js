@@ -140,4 +140,24 @@ document.addEventListener('DOMContentLoaded', () => {
             camposCliente.style.display = 'none';
         });
     }
+    // Mejor experiencia al enviar encuesta
+    const formEncuesta = document.getElementById('form-encuesta');
+    if (formEncuesta) {
+        formEncuesta.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const mensaje = document.getElementById('mensaje-encuesta');
+            if (mensaje) {
+                mensaje.innerHTML = '<div class="agradecimiento-encuesta">Encuesta enviada. ¡Gracias por participar!</div>';
+                mensaje.style.display = 'block';
+            }
+            formEncuesta.style.display = 'none';
+            setTimeout(() => {
+                if (mensaje) {
+                    mensaje.style.display = 'none';
+                }
+                formEncuesta.reset();
+                formEncuesta.style.display = 'block';
+            }, 2000);
+        });
+    }
 });

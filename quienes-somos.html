@@ -3,71 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos | Visualdron</title>
+    <title>Quienes somos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Visualdron</h1>
-        <h2>Quiénes somos</h2>
+        <h1>VISUALDRON</h1>
+        <button class="btn-regresar" onclick="window.history.back()">⟵</button>
     </header>
-    <main>
-        <section>
-            <h3>Nuestra historia</h3>
-            <p>Visualdron nació en 2018 como un pequeño grupo de entusiastas de la tecnología aérea, reunidos por la pasión de explorar nuevas fronteras en la medición y el análisis de terrenos. Al principio, nuestro trabajo se centraba en proyectos locales, colaborando con agricultores y constructores que buscaban soluciones innovadoras para sus necesidades. Con el tiempo, la curiosidad y el compromiso nos llevaron a investigar y desarrollar nuestros propios sistemas de drones, adaptados a los retos de la geografía colombiana y latinoamericana. Cada año, fuimos sumando talento y experiencia, aprendiendo de los desafíos y celebrando los logros. La historia de Visualdron es la historia de la perseverancia, la colaboración y la búsqueda constante de la excelencia tecnológica. Desde nuestros primeros vuelos en campos rurales hasta la participación en grandes obras de infraestructura, hemos mantenido el espíritu de equipo y la visión de transformar la manera en que se mide y gestiona el territorio.</p>
-        </section>
-        <section>
-            <h3>Cómo crecimos</h3>
-            <p>El crecimiento de Visualdron ha sido el resultado de la confianza de nuestros clientes y la dedicación de nuestro equipo. En los primeros años, enfrentamos dificultades técnicas, limitaciones de recursos y la necesidad de educar al mercado sobre los beneficios de la tecnología aérea. Sin embargo, cada obstáculo se convirtió en una oportunidad para innovar y mejorar. Implementamos programas de formación interna, colaboramos con universidades y centros de investigación, y establecimos alianzas estratégicas con empresas líderes en el sector. La expansión de nuestros servicios nos permitió llegar a nuevos mercados, desde la agricultura de precisión hasta la gestión ambiental y la construcción inteligente. Hoy, Visualdron cuenta con una red de expertos, pilotos certificados y desarrolladores que trabajan en proyectos de alto impacto en toda Latinoamérica. Nuestro crecimiento se refleja en la calidad de nuestros productos, la satisfacción de nuestros clientes y el reconocimiento de la industria.</p>
-        </section>
-        <section>
-            <h3>A dónde queremos llegar</h3>
-            <p>El futuro de Visualdron está marcado por la ambición de liderar la transformación digital en la gestión de terrenos y recursos naturales. Queremos ser referentes en innovación, sostenibilidad y servicio al cliente, desarrollando soluciones que integren inteligencia artificial, análisis de datos y automatización avanzada. Nuestra meta es expandir nuestra presencia internacional, participando en proyectos de gran escala y colaborando con instituciones públicas y privadas para mejorar la calidad de vida de las comunidades. Visualdron aspira a ser un motor de cambio, promoviendo el uso responsable de la tecnología y contribuyendo al desarrollo sostenible de la región. Creemos en el poder de la educación, la investigación y la colaboración para alcanzar nuevos horizontes y superar los límites de lo posible. El camino hacia el futuro está lleno de retos, pero también de oportunidades para crecer, aprender y dejar una huella positiva en el mundo.</p>
-        </section>
-        <section>
-            <h3>Nuestros líderes</h3>
+    <div class="main-layout">
+        <nav class="mini-menu-qs" id="miniMenuQS">
+            <button class="btn-cerrar-menu" id="btnCerrarMenu" title="Ocultar menú">✕</button>
+            <h1 class="blog-titulo blog-titulo-qs">Quienes somos</h1>
             <ul>
-                <li><strong>María Torres</strong> – CEO & Fundadora<br>Ingeniera electrónica, pionera en tecnología de drones en Colombia. Apasionada por la innovación y el liderazgo inclusivo.</li>
-                <li><strong>Carlos Ramírez</strong> – Director de Operaciones<br>Experto en logística y gestión de proyectos. Ha liderado más de 200 operaciones de campo con drones en Latinoamérica.</li>
-                <li><strong>Laura Gómez</strong> – Jefa de Innovación<br>Desarrolladora de software y especialista en inteligencia artificial aplicada a drones. Promueve la formación y el crecimiento profesional.</li>
+                <li><a href="#historia">Nuestra historia</a></li>
+                <li><a href="#crecimiento">Cómo crecimos</a></li>
+                <li><a href="#futuro">A dónde queremos llegar</a></li>
+                <li><a href="#lideres">Nuestros líderes</a></li>
+                <li><a href="#experiencias-trabajadores">Experiencias de los trabajadores</a></li>
+                <li><a href="#experiencias-usuarios">Experiencias de los usuarios</a></li>
+                <li><a href="#resenas">Reseñas de nuestros servicios</a></li>
             </ul>
-        </section>
-        <section>
-            <h3>Experiencias de los trabajadores</h3>
-            <ul>
-                <li>@andreslopez, Piloto de drones: "Trabajar en Visualdron me ha permitido crecer profesionalmente y conocer tecnologías de vanguardia. El ambiente laboral es excelente."</li>
-                <li>@paolaruiz, Analista de datos: "Aquí cada día es un reto nuevo. El equipo siempre está dispuesto a ayudar y compartir conocimientos."</li>
-                <li>@felipegomez, Desarrollador de software: "Me encanta la cultura de innovación y el apoyo para aprender nuevas tecnologías. Visualdron es un gran lugar para crecer."</li>
-                <li>@danielamartinez, Gestora de proyectos: "La colaboración entre áreas es fundamental. Aquí todos aportamos ideas y soluciones para los clientes."</li>
-                <li>@juliocastro, Especialista en topografía: "He participado en proyectos increíbles y siempre recibo apoyo para capacitarme y mejorar."</li>
-                <li>@monicavelasquez, Soporte técnico: "El ambiente de trabajo es muy positivo y siempre hay oportunidades para aprender de los mejores."</li>
-                <li>@sebastianperez, Piloto junior: "Me siento motivado por el equipo y los retos que enfrentamos cada día. Visualdron es mi segunda familia."</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Experiencias de los usuarios</h3>
-            <ul>
-                <li>@juanmartinez, Cliente agrícola: "Gracias a Visualdron optimicé el monitoreo de mis cultivos y reduje costos. El servicio es rápido y confiable."</li>
-                <li>@luisafernandez, Ingeniera civil: "La precisión de los datos y el acompañamiento técnico fueron clave para el éxito de mi proyecto de construcción."</li>
-                <li>@carlosrojas, Empresario: "Visualdron me ayudó a tomar decisiones estratégicas en mi empresa. Los reportes son muy completos."</li>
-                <li>@angelicadiaz, Arquitecta: "El equipo de Visualdron es muy profesional y siempre están atentos a las necesidades del cliente."</li>
-                <li>@marioruiz, Consultor ambiental: "La tecnología de drones ha revolucionado la forma en que realizamos estudios ambientales. Recomiendo Visualdron."</li>
-                <li>@sofiagomez, Ingeniera forestal: "Los mapas y modelos 3D que recibimos son de gran utilidad para nuestros proyectos de conservación."</li>
-                <li>@danielpineda, Usuario: "La atención personalizada y el soporte técnico hacen la diferencia. Visualdron es mi aliado en cada proyecto."</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Reseñas de nuestros servicios</h3>
-            <ul>
-                <li>@ricardogomez: "Excelente atención y resultados. Recomiendo Visualdron para cualquier proyecto que requiera tecnología aérea."</li>
-                <li>@camilatorres: "El equipo es muy profesional y los informes entregados superaron mis expectativas."</li>
-                <li>@felipeagudelo: "La rapidez en la entrega de resultados y la calidad del servicio son insuperables."</li>
-                <li>@lauracastro: "Me sorprendió la precisión de los datos y la facilidad para acceder a los informes digitales."</li>
-                <li>@danielrodriguez: "Visualdron es sinónimo de confianza y profesionalismo. Los recomiendo totalmente."</li>
-                <li>@marianamoreno: "El soporte técnico fue excelente y resolvieron todas mis dudas rápidamente."</li>
-                <li>@joseperez: "Muy satisfecho con el servicio y la atención. Sin duda volveré a trabajar con Visualdron."</li>
-            </ul>
-        </section>
-    </main>
+        </nav>
+        <button class="btn-abrir-menu" id="btnAbrirMenu" title="Mostrar menú" style="display:none;position:fixed;left:0;top:80px;z-index:1000;">☰ Menú</button>
+        <div class="container">
+            <section class="info-adornos">
+                <h2 id="historia">Nuestra historia</h2>
+                <p>Visualdron nació en 2018 como un pequeño grupo de entusiastas de la tecnología aérea, 
+                reunidos por la pasión de explorar nuevas fronteras en la medición y el análisis de terrenos. 
+                Al principio, nuestro trabajo se centraba en proyectos locales, colaborando con agricultores y 
+                constructores que buscaban soluciones innovadoras para sus necesidades. Con el tiempo, la curiosidad y 
+                el compromiso nos llevaron a investigar y desarrollar nuestros propios sistemas de drones, adaptados a los retos 
+                de la geografía colombiana y latinoamericana. Cada año, fuimos sumando talento y experiencia, 
+                aprendiendo de los desafíos y celebrando los logros. La historia de Visualdron es la historia de la 
+                perseverancia, la colaboración y la búsqueda constante de la excelencia tecnológica. Desde nuestros primeros 
+                vuelos en campos rurales hasta la participación en grandes obras de infraestructura, hemos mantenido el 
+                espíritu de equipo y la visión de transformar la manera en que se mide y gestiona el territorio.</p>
+                <h2 id="crecimiento">Cómo crecimos</h2>
+                <p>El crecimiento de Visualdron ha sido el resultado de la confianza de nuestros clientes y la dedicación de nuestro 
+                    equipo. En los primeros años, enfrentamos dificultades técnicas, limitaciones de recursos y la necesidad de 
+                    educar al mercado sobre los beneficios de la tecnología aérea. Sin embargo, cada obstáculo se convirtió en una 
+                    oportunidad para innovar y mejorar. Implementamos programas de formación interna, colaboramos con universidades y 
+                    centros de investigación, y establecimos alianzas estratégicas con empresas líderes en el sector. 
+                    La expansión de nuestros servicios nos permitió llegar a nuevos mercados, desde la agricultura de precisión 
+                    hasta la gestión ambiental y la construcción inteligente. Hoy, Visualdron cuenta con una red de expertos, 
+                    pilotos certificados y desarrolladores que trabajan en proyectos de alto impacto en toda Latinoamérica. 
+                    Nuestro crecimiento se refleja en la calidad de nuestros productos, la satisfacción de nuestros clientes y el 
+                    reconocimiento de la industria.</p>
+                <h2 id="futuro">A dónde queremos llegar</h2>
+                <p>El futuro de Visualdron está marcado por la ambición de liderar la transformación digital en la gestión de terrenos 
+                    y recursos naturales. Queremos ser referentes en innovación, sostenibilidad y servicio al cliente, desarrollando 
+                    soluciones que integren inteligencia artificial, análisis de datos y automatización avanzada. Nuestra meta es 
+                    expandir nuestra presencia internacional, participando en proyectos de gran escala y colaborando con instituciones 
+                    públicas y privadas para mejorar la calidad de vida de las comunidades. Visualdron aspira a ser un motor de cambio, 
+                    promoviendo el uso responsable de la tecnología y contribuyendo al desarrollo sostenible de la región. 
+                    Creemos en el poder de la educación, la investigación y la colaboración para alcanzar nuevos 
+                    horizontes y superar los límites de lo posible. El camino hacia el futuro está lleno de retos, pero 
+                    también de oportunidades para crecer, aprender y dejar una huella positiva en el mundo.</p>
+                <h2 id="lideres">Nuestros líderes</h2>
+                <div class="lideres-perfiles">
+                    <div class="perfil-lider">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_37Ub0NHACiL00AErZxP13LbGhHlb9yd_iw&s" alt="Líder 1">
+                        <div>
+                            <h3>María Torres</h3>
+                            <span class="cargo-lider">CEO & Fundadora</span>
+                            <p>Ingeniera electrónica, pionera en tecnología de drones en Colombia. Apasionada por la innovación y el liderazgo inclusivo.</p>
+                        </div>
+                    </div>
+                    <div class="perfil-lider">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzWWUJqNyA5XtcVpN-liKrxe1yJH3eLmUf7g&s" alt="Líder 2">
+                        <div>
+                            <h3>Carlos Ramírez</h3>
+                            <span class="cargo-lider">Director de Operaciones</span>
+                            <p>Experto en logística y gestión de proyectos. Ha liderado más de 200 operaciones de campo con drones en Latinoamérica.</p>
+                        </div>
+                    </div>
+                    <div class="perfil-lider">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28x27b9il6TW54fMz_UCWqYm708rOTrUvKQ&s" alt="Líder 3">
+                        <div>
+                            <h3>Laura Gómez</h3>
+                            <span class="cargo-lider">Jefa de Innovación</span>
+                            <p>Desarrolladora de software y especialista en inteligencia artificial aplicada a drones. Promueve la formación y el crecimiento profesional.</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="experiencias-trabajadores">Experiencias de los trabajadores</h2>
+                <div class="comentarios-perfiles">
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@andreslopez</span>
+                            <span class="cargo-comentario">Piloto de drones</span>
+                            <div class="perfil-post">
+                                <p>“Trabajar en Visualdron me ha permitido crecer profesionalmente y conocer tecnologías de vanguardia. El ambiente laboral es excelente.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@paolaruiz</span>
+                            <span class="cargo-comentario">Analista de datos</span>
+                            <div class="perfil-post">
+                                <p>“Aquí cada día es un reto nuevo. El equipo siempre está dispuesto a ayudar y compartir conocimientos.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@felipegomez</span>
+                            <span class="cargo-comentario">Desarrollador de software</span>
+                            <div class="perfil-post">
+                                <p>“Me encanta la cultura de innovación y el apoyo para aprender nuevas tecnologías. Visualdron es un gran lugar para crecer.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@danielamartinez</span>
+                            <span class="cargo-comentario">Gestora de proyectos</span>
+                            <div class="perfil-post">
+                                <p>“La colaboración entre áreas es fundamental. Aquí todos aportamos ideas y soluciones para los clientes.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@juliocastro</span>
+                            <span class="cargo-comentario">Especialista en topografía</span>
+                            <div class="perfil-post">
+                                <p>“He participado en proyectos increíbles y siempre recibo apoyo para capacitarme y mejorar.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@monicavelasquez</span>
+                            <span class="cargo-comentario">Soporte técnico</span>
+                            <div class="perfil-post">
+                                <p>“El ambiente de trabajo es muy positivo y siempre hay oportunidades para aprender de los mejores.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@sebastianperez</span>
+                            <span class="cargo-comentario">Piloto junior</span>
+                            <div class="perfil-post">
+                                <p>“Me siento motivado por el equipo y los retos que enfrentamos cada día. Visualdron es mi segunda familia.”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="experiencias-usuarios">Experiencias de los usuarios</h2>
+                <div class="comentarios-perfiles">
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@juanmartinez</span>
+                            <span class="cargo-comentario">Cliente agrícola</span>
+                            <div class="perfil-post">
+                                <p>“Gracias a Visualdron optimicé el monitoreo de mis cultivos y reduje costos. El servicio es rápido y confiable.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@luisafernandez</span>
+                            <span class="cargo-comentario">Ingeniera civil</span>
+                            <div class="perfil-post">
+                                <p>“La precisión de los datos y el acompañamiento técnico fueron clave para el éxito de mi proyecto de construcción.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@carlosrojas</span>
+                            <span class="cargo-comentario">Empresario</span>
+                            <div class="perfil-post">
+                                <p>“Visualdron me ayudó a tomar decisiones estratégicas en mi empresa. Los reportes son muy completos.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@angelicadiaz</span>
+                            <span class="cargo-comentario">Arquitecta</span>
+                            <div class="perfil-post">
+                                <p>“El equipo de Visualdron es muy profesional y siempre están atentos a las necesidades del cliente.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@marioruiz</span>
+                            <span class="cargo-comentario">Consultor ambiental</span>
+                            <div class="perfil-post">
+                                <p>“La tecnología de drones ha revolucionado la forma en que realizamos estudios ambientales. Recomiendo Visualdron.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@sofiagomez</span>
+                            <span class="cargo-comentario">Ingeniera forestal</span>
+                            <div class="perfil-post">
+                                <p>“Los mapas y modelos 3D que recibimos son de gran utilidad para nuestros proyectos de conservación.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@danielpineda</span>
+                            <span class="cargo-comentario">Usuario</span>
+                            <div class="perfil-post">
+                                <p>“La atención personalizada y el soporte técnico hacen la diferencia. Visualdron es mi aliado en cada proyecto.”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="resenas">Reseñas de nuestros servicios</h2>
+                <div class="comentarios-perfiles">
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@ricardogomez</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“Excelente atención y resultados. Recomiendo Visualdron para cualquier proyecto que requiera tecnología aérea.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@camilatorres</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“El equipo es muy profesional y los informes entregados superaron mis expectativas.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@felipeagudelo</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“La rapidez en la entrega de resultados y la calidad del servicio son insuperables.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@lauracastro</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“Me sorprendió la precisión de los datos y la facilidad para acceder a los informes digitales.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@danielrodriguez</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“Visualdron es sinónimo de confianza y profesionalismo. Los recomiendo totalmente.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@marianamoreno</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“El soporte técnico fue excelente y resolvieron todas mis dudas rápidamente.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-comentario">
+                        <div>
+                            <span class="perfil-nombre">@joseperez</span>
+                            <span class="cargo-comentario">Reseña</span>
+                            <div class="perfil-post">
+                                <p>“Muy satisfecho con el servicio y la atención. Sin duda volveré a trabajar con Visualdron.”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<script>
+// Mostrar/ocultar menú lateral
+const miniMenuQS = document.getElementById('miniMenuQS');
+const btnCerrarMenu = document.getElementById('btnCerrarMenu');
+const btnAbrirMenu = document.getElementById('btnAbrirMenu');
+if (btnCerrarMenu && btnAbrirMenu && miniMenuQS) {
+    btnCerrarMenu.onclick = function() {
+        miniMenuQS.style.display = 'none';
+        btnAbrirMenu.style.display = 'block';
+    };
+    btnAbrirMenu.onclick = function() {
+        miniMenuQS.style.display = 'block';
+        btnAbrirMenu.style.display = 'none';
+    };
+}
+</script>
 </body>
 </html>
