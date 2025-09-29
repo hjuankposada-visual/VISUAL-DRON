@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Medición</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="barra-menu">
+        <div class="logo-menu">Visualdron</div>
+        <!-- ...botones del menú... -->
+    </nav>
+    <header>
+        <div class="subtitulo-medicion">Medición y Análisis Topográfico</div>
+        <button class="btn-regresar" onclick="window.history.back()">⟵</button>
+    </header>
+    <main class="container">
+        <section class="info-adornos">
+            <h2>Servicios de medición</h2>
+            <p>Ofrecemos servicios de medición y análisis topográfico de alta precisión con drones.</p>
+            <ul>
+                <li>Medición de áreas y volúmenes</li>
+                <li>Topografía digital</li>
+                <li>Generación de mapas y ortomosaicos</li>
+                <li>Modelos 3D y análisis de elevación</li>
+                <li>Inspección de obras y estructuras</li>
+                <li>Seguimiento de avance de proyectos</li>
+                <li>Control de inventarios y materiales</li>
+                <li>Medición de terrenos agrícolas e industriales</li>
+                <li>Estudios ambientales y forestales</li>
+            </ul>
+            <h2>Ventajas de la medición con drones</h2>
+            <ul>
+                <li>Mayor rapidez y eficiencia en levantamientos topográficos.</li>
+                <li>Precisión centimétrica en áreas y volúmenes.</li>
+                <li>Acceso a zonas difíciles o peligrosas sin riesgo humano.</li>
+                <li>Generación de modelos digitales y mapas interactivos.</li>
+                <li>Reducción de costos frente a métodos tradicionales.</li>
+                <li>Resultados visuales y digitales para análisis avanzado.</li>
+                <li>Actualización periódica de datos y monitoreo continuo.</li>
+            </ul>
+            <h2>Comparativa: Drones vs. Métodos Tradicionales</h2>
+            <table class="tabla-comparativa">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Drones</th>
+                        <th>Tradicional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiempo de medición</td>
+                        <td>1 día</td>
+                        <td>3-5 días</td>
+                    </tr>
+                    <tr>
+                        <td>Precisión</td>
+                        <td>±3 cm</td>
+                        <td>±10 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Acceso a zonas difíciles</td>
+                        <td>Fácil y seguro</td>
+                        <td>Limitado y riesgoso</td>
+                    </tr>
+                    <tr>
+                        <td>Coste</td>
+                        <td>Bajo/Medio</td>
+                        <td>Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Visualización 3D</td>
+                        <td>Disponible</td>
+                        <td>No disponible</td>
+                    </tr>
+                    <tr>
+                        <td>Actualización de datos</td>
+                        <td>Automática y frecuente</td>
+                        <td>Manual y esporádica</td>
+                    </tr>
+                    <tr>
+                        <td>Seguridad</td>
+                        <td>Sin riesgo humano</td>
+                        <td>Riesgo en zonas peligrosas</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Qué tipo de terrenos pueden medirse?</button>
+                    <div class="faq-answer">Medimos terrenos urbanos, rurales, industriales, agrícolas, forestales y zonas de difícil acceso.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Qué precisión ofrecen los drones?</button>
+                    <div class="faq-answer">La precisión puede llegar hasta ±3 cm dependiendo del dron, sensores y condiciones del terreno.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Cuánto tarda un levantamiento?</button>
+                    <div class="faq-answer">En la mayoría de los casos, menos de un día para áreas medianas. Grandes extensiones pueden requerir más tiempo.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Qué entregables se obtienen?</button>
+                    <div class="faq-answer">Recibes mapas, ortomosaicos, modelos 3D, reportes digitales y archivos compatibles con software de ingeniería.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Es seguro para zonas peligrosas?</button>
+                    <div class="faq-answer">Sí, los drones acceden a zonas peligrosas sin exponer personas a riesgos físicos o ambientales.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Puedo solicitar monitoreo periódico?</button>
+                    <div class="faq-answer">Sí, ofrecemos servicios de monitoreo y actualización periódica de datos según tus necesidades.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Qué información debo proporcionar para cotizar?</button>
+                    <div class="faq-answer">Solo necesitas indicar la ubicación, tipo de terreno, área aproximada y el objetivo del estudio.</div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-question">¿Cómo recibo los resultados?</button>
+                    <div class="faq-answer">Te enviamos los resultados por correo electrónico y, si lo deseas, acceso a una plataforma digital.</div>
+                </div>
+            </div>
+            <h2>Solicita tu estudio</h2>
+            <form class="form-contacto" id="form-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+                <button type="submit">Solicitar información</button>
+            </form>
+            <div id="modal-exito-bg" class="modal-exito-bg">
+                <div class="modal-exito">
+                    <span id="modal-exito-text">Pronto nuestros expertos se comunicarán contigo</span>
+                    <button id="modal-exito-btn">Aceptar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Proyecto Web
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Construcción y Drones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="construccion">
+    <nav class="barra-menu">
+        <div class="logo-menu">Visualdron</div>
+        <!-- ...botones del menú... -->
+    </nav>
+    <header>
+        <div class="subtitulo-construccion">Construcción y Escaneabilidad con Drones</div>
+        <button class="btn-regresar" onclick="window.history.back()">⟵</button>
+    </header>
+    <main class="container">
+        <section class="info-adornos">
+            <h2>Tabla de Escaneabilidad de Drones en Construcción</h2>
+            <div style="overflow-x:auto;">
+                <table class="tabla-info">
+                    <thead>
+                        <tr>
+                            <th>Dron</th>
+                            <th>Tipo de Construcción</th>
+                            <th>Terreno</th>
+                            <th>Altura/Profundidad</th>
+                            <th>Autonomía</th>
+                            <th>Medición/Aplicación</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Multirrotor</td>
+                            <td>Edificios, casas, puentes</td>
+                            <td>Urbano/Rural</td>
+                            <td>120 m</td>
+                            <td>30 min</td>
+                            <td>Fotografía aérea, inspección</td>
+                            <td><img src="imagenes/dron.multirrotor.png" alt="Dron Multirrotor" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Ala Fija</td>
+                            <td>Grandes obras, carreteras</td>
+                            <td>Extensiones grandes</td>
+                            <td>500 m</td>
+                            <td>2 h</td>
+                            <td>Cartografía, monitoreo ambiental</td>
+                            <td><img src="imagenes/dron.alafija.png" alt="Dron Ala Fija" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Híbrido</td>
+                            <td>Obras mixtas, zonas rurales</td>
+                            <td>Mixto</td>
+                            <td>300 m</td>
+                            <td>1 h</td>
+                            <td>Rescate, vigilancia, agricultura</td>
+                            <td><img src="imagenes/dron.hibrido.png" alt="Dron Híbrido" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Submarino</td>
+                            <td>Infraestructura acuática</td>
+                            <td>Acuático</td>
+                            <td>100 m (profundidad)</td>
+                            <td>4 h</td>
+                            <td>Inspección marina</td>
+                            <td><img src="imagenes/dron.submarino.png" alt="Dron Submarino" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Carga</td>
+                            <td>Industrial, logística</td>
+                            <td>Industrial</td>
+                            <td>20 kg (carga)</td>
+                            <td>45 min</td>
+                            <td>Transporte de materiales</td>
+                            <td><img src="imagenes/dron.decarga.png" alt="Dron de Carga" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>FPV</td>
+                            <td>Obras en competencia, recreativo</td>
+                            <td>Competencia</td>
+                            <td>140 km/h (velocidad)</td>
+                            <td>10 min</td>
+                            <td>Carreras, grabación dinámica</td>
+                            <td><img src="imagenes/dron.FPV.png" alt="Dron FPV" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Hexacóptero</td>
+                            <td>Inspección técnica, fotografía</td>
+                            <td>Mixto</td>
+                            <td>200 m</td>
+                            <td>35 min</td>
+                            <td>Fotografía profesional</td>
+                            <td><img src="imagenes/dron.hexacoptero.png" alt="Dron Hexacóptero" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Agricultura</td>
+                            <td>Terrenos rurales, cultivos</td>
+                            <td>Rural</td>
+                            <td>15 L (tanque)</td>
+                            <td>25 min</td>
+                            <td>Pulverización, monitoreo</td>
+                            <td><img src="imagenes/dron.agricultura.png" alt="Dron Agricultura" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Vigilancia</td>
+                            <td>Seguridad urbana</td>
+                            <td>Urbano</td>
+                            <td>150 m</td>
+                            <td>40 min</td>
+                            <td>Patrullaje, seguridad</td>
+                            <td><img src="imagenes/dron.vigilancia.png" alt="Dron Vigilancia" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Mapeo 3D</td>
+                            <td>Modelado, arquitectura</td>
+                            <td>Mixto</td>
+                            <td>250 m</td>
+                            <td>50 min</td>
+                            <td>Modelado 3D, construcción</td>
+                            <td><img src="imagenes/dron.mapeo.3D.png" alt="Dron Mapeo 3D" style="width:70px; border-radius:8px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Terrenos Y Referencia De Mapeos</h2>
+            <div class="planos-imgs">
+                <img src="https://aerialproductions.es/wp-content/uploads/2018/04/FOTOGRAMETRIA-DRONES.jpg" alt="Plano Terreno 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBeYl5qG7lPrEPQQ-24B46cYrAyJztkVYAmA&s" alt="Plano Terreno 2">
+                <img src="https://www.aeroterra.com/content/dam/esrisites/en-us/arcgis/products/arcgis-drone-collections/assets/mts-automate-2d-3d-outputs.png" alt="Plano Terreno 3">
+            </div>
+            <h2>Estudios Estadísticos</h2>
+            <ul class="estadisticas-list">
+                <li>Precisión de medición con drones multirrotor: <strong>±3 cm</strong> en obras urbanas.</li>
+                <li>Reducción de tiempo de levantamiento topográfico: <strong>hasta 70%</strong> usando drones de ala fija.</li>
+                <li>Inspección de estructuras con drones hexacóptero: <strong>98%</strong> de cobertura visual.</li>
+                <li>Monitoreo de avance de obra con mapeo 3D: <strong>actualización diaria</strong> de modelos.</li>
+                <li>Uso de drones submarinos: <strong>reducción de riesgos humanos</strong> en inspección marina.</li>
+                <li>Optimización de logística con drones de carga: <strong>ahorro de hasta 30% en tiempo de entrega</strong>.</li>
+            </ul>
+            <h2>Terrenos y Medidas Comunes</h2>
+            <table class="tabla-info">
+                <thead>
+                    <tr>
+                        <th>Tipo de Terreno</th>
+                        <th>Medida Aproximada</th>
+                        <th>Dron Recomendado</th>
+                        <th>Plano Referencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Solar urbano</td>
+                        <td>500 m²</td>
+                        <td>Multirrotor, Hexacóptero</td>
+                        <td><img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyUWMnxYNpnQ_aq1MXdiF5YJiSlfIIi2X5Uw&s" alt="Plano Solar" style="width:100px; border-radius:6px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Parcela agrícola</td>
+                        <td>5 ha</td>
+                        <td>Ala fija, Agricultura</td>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6snRpMW5DSa_Snit8bMQT-46NTyfCLEL31Q&s" alt="Plano Parcela" style="width:100px; border-radius:6px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Infraestructura acuática</td>
+                        <td>100 m profundidad</td>
+                        <td>Submarino</td>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9BizJ3F1t7PChdwpKUKxq-0VmPGq3N3ijxg&s" alt="Plano Acuático" style="width:100px; border-radius:6px;"></td>
+                    <tr>
+                        <td>Obra industrial</td>
+                        <td>2,000 m²</td>
+                        <td>Carga, Mapeo 3D</td>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIYQR2-8kShrN-hC9HoDkTmKaB6ULRZUiGA&s" alt="Plano Industrial" style="width:100px; border-radius:6px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="extra-info">
+                <h3>Aplicaciones Avanzadas</h3>
+                <ul>
+                    <li><strong>Fotogrametría:</strong> Generación de modelos 3D y ortomosaicos para estudios de obra.</li>
+                    <li><strong>Inspección térmica:</strong> Detección de fugas y puntos críticos en edificaciones.</li>
+                    <li><strong>Seguimiento de avance:</strong> Informes visuales periódicos para clientes y supervisores.</li>
+                    <li><strong>Control de materiales:</strong> Inventario y seguimiento de suministros mediante drones de carga.</li>
+                    <li><strong>Seguridad:</strong> Vigilancia de perímetros y zonas de acceso restringido.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Proyecto Web
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

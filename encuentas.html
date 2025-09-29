@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuentas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="barra-menu">
+        <div class="logo-menu">Visualdron</div>
+        <!-- ...botones del menú... -->
+    </nav>
+    <header>
+        <h1 class="blog-titulo" style="text-align:center;">Encuentas</h1>
+        <button class="btn-regresar" onclick="window.history.back()">⟵</button>
+    </header>
+    <div class="container">
+        <section class="info-adornos" style="margin-left:auto; margin-right:auto;">
+            <h2>Participa en nuestras encuestas</h2>
+            <p>Tu opinión es muy importante para nosotros. Ayúdanos a mejorar nuestros servicios respondiendo las siguientes preguntas:</p>
+            <ul>
+                <li>¿Qué te gustaría ver en Visualdron?</li>
+                <li>¿Has utilizado drones en tus proyectos?</li>
+                <li>¿Qué funcionalidades consideras más útiles?</li>
+            </ul>
+            <p>Puedes enviarnos tus respuestas a nuestro correo o por el formulario de contacto.</p>
+            <!-- Chat-list de preguntas frecuentes tipo sí/no -->
+            <div class="chat-list-faq">
+                <h3>Encuesta sobre el sitio web</h3>
+                <form id="form-encuesta">
+                    <ul>
+                        <li><span>¿Te gusta el estilo visual del sitio?</span>
+                            <label><input type="radio" name="estilo" value="si" required> Sí</label>
+                            <label><input type="radio" name="estilo" value="no"> No</label>
+                        </li>
+                        <li><span>¿Los colores te parecen agradables?</span>
+                            <label><input type="radio" name="colores" value="si" required> Sí</label>
+                            <label><input type="radio" name="colores" value="no"> No</label>
+                        </li>
+                        <li><span>¿La funcionalidad es fácil de usar?</span>
+                            <label><input type="radio" name="funcionalidad" value="si" required> Sí</label>
+                            <label><input type="radio" name="funcionalidad" value="no"> No</label>
+                        </li>
+                        <li><span>¿Recomendarías Visualdron a otros?</span>
+                            <label><input type="radio" name="recomendar" value="si" required> Sí</label>
+                            <label><input type="radio" name="recomendar" value="no"> No</label>
+                        </li>
+                        <li><span>¿La navegación es intuitiva?</span>
+                            <label><input type="radio" name="navegacion" value="si" required> Sí</label>
+                            <label><input type="radio" name="navegacion" value="no"> No</label>
+                        </li>
+                        <li><span>¿La información es clara y útil?</span>
+                            <label><input type="radio" name="informacion" value="si" required> Sí</label>
+                            <label><input type="radio" name="informacion" value="no"> No</label>
+                        </li>
+                        <li><span>¿El sitio carga rápido?</span>
+                            <label><input type="radio" name="carga" value="si" required> Sí</label>
+                            <label><input type="radio" name="carga" value="no"> No</label>
+                        </li>
+                        <li><span>¿Te gustaría ver más imágenes?</span>
+                            <label><input type="radio" name="imagenes" value="si" required> Sí</label>
+                            <label><input type="radio" name="imagenes" value="no"> No</label>
+                        </li>
+                        <li><span>¿Consideras útil la sección de preguntas frecuentes?</span>
+                            <label><input type="radio" name="faq" value="si" required> Sí</label>
+                            <label><input type="radio" name="faq" value="no"> No</label>
+                        </li>
+                        <li><span>¿El diseño es moderno?</span>
+                            <label><input type="radio" name="moderno" value="si" required> Sí</label>
+                            <label><input type="radio" name="moderno" value="no"> No</label>
+                        </li>
+                    </ul>
+                    <button type="submit" class="btn-encuesta">Enviar encuesta</button>
+                    <div id="mensaje-encuesta" style="display:none;margin-top:16px;color:#2a4d7c;font-weight:700;text-align:center;">Gracias</div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Proyecto Web
+    </footer>
+    <script src="script.js"></script>
+    <script>
+    document.getElementById('form-encuesta').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('mensaje-encuesta').style.display = 'block';
+        this.querySelector('button[type="submit"]').style.display = 'none';
+    });
+    </script>
+    <!-- Botones flotantes profesionales: Chat y WhatsApp -->
+    <div class="floating-buttons-container">
+        <a href="https://wa.me/5215555555555?text=Hola%20VisualDron!%20Quiero%20más%20información." class="whatsapp-float" target="_blank" title="Chatea por WhatsApp">
+            <span style="font-family:Arial,sans-serif;">💬</span>
+        </a>
+        <div class="chat-float-container">
+            <button class="chat-toggle" id="chat-toggle-btn" title="Abrir chat">
+                <span style="font-size:1.3em;">💬</span>
+            </button>
+            <div class="chat-popup" id="chat-popup">
+                <div class="chat-popup-header">
+                    <span>VisualDron</span>
+                    <button class="chat-close" id="chat-close-btn" title="Cerrar">&times;</button>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-msg chat-msg-bot">¡Hola! ¿En qué puedo ayudarte?</div>
+                </div>
+                <form class="chat-form" id="chat-form" autocomplete="off">
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." required />
+                    <button type="submit" title="Enviar">➤</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estilos para los botones flotantes y chat -->
+    <style>
+    .floating-buttons-container {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-end;
+    }
+    .whatsapp-float {
+        background: #25d366;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 18px #0ca3c9a0;
+        font-size: 2.2em;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        margin-bottom: 0;
+        outline: none;
+    }
+    .whatsapp-float:hover {
+        background: #128c7e;
+        transform: scale(1.08);
+    }
+    .whatsapp-float:active {
+        background: #128c7e;
+    }
+    .chat-float-container {
+        position: static;
+        margin: 0;
+    }
+    .chat-toggle {
+        background: #ffe600;
+        color: #2a4d7c;
+        border: none;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6em;
+        box-shadow: 0 4px 18px #ffe60055;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+        outline: none;
+    }
+    .chat-toggle:hover {
+        background: #2a4d7c;
+        color: #ffe600;
+        transform: scale(1.08);
+    }
+    .chat-popup {
+        display: none;
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 320px;
+        background: #fffbe6;
+        border-radius: 16px;
+        box-shadow: 0 4px 18px #ffe60055, 0 2px 12px #0002;
+        z-index: 10000;
+        flex-direction: column;
+        overflow: hidden;
+        animation: fadeInChat 0.3s;
+    }
+    @keyframes fadeInChat {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .chat-popup-header {
+        background: #ffe600;
+        color: #2a4d7c;
+        font-weight: 700;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.1em;
+    }
+    .chat-close {
+        background: none;
+        border: none;
+        color: #2a4d7c;
+        font-size: 1.5em;
+        cursor: pointer;
+        font-weight: bold;
+        transition: color 0.2s;
+    }
+    .chat-close:hover {
+        color: #f10bc7ff;
+    }
+    .chat-messages {
+        padding: 18px;
+        background: #fffbe6;
+        min-height: 60px;
+        max-height: 180px;
+        overflow-y: auto;
+        font-size: 1em;
+        color: #222;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .chat-msg {
+        background: #ffe600;
+        color: #2a4d7c;
+        border-radius: 10px;
+        padding: 8px 14px;
+        max-width: 80%;
+        align-self: flex-start;
+        font-weight: 500;
+        box-shadow: 0 2px 8px #ffe60033;
+    }
+    .chat-msg-bot {
+        align-self: flex-start;
+    }
+    .chat-msg-user {
+        background: #2a4d7c;
+        color: #ffe600;
+        align-self: flex-end;
+    }
+    .chat-form {
+        display: flex;
+        align-items: center;
+        padding: 10px 14px;
+        background: #fffbe6;
+        border-top: 1px solid #ffe600;
+        gap: 8px;
+    }
+    .chat-form input {
+        flex: 1;
+        border: 1.5px solid #ffe600;
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 1em;
+        outline: none;
+        background: #fff;
+        color: #222;
+    }
+    .chat-form button {
+        background: #ffe600;
+        color: #2a4d7c;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 14px;
+        font-size: 1.2em;
+        cursor: pointer;
+        font-weight: 700;
+        transition: background 0.2s, color 0.2s;
+    }
+    .chat-form button:hover {
+        background: #2a4d7c;
+        color: #ffe600;
+    }
+    </style>
+    <script>
+    // Chat flotante profesional
+    const chatToggleBtn = document.getElementById('chat-toggle-btn');
+    const chatPopup = document.getElementById('chat-popup');
+    const chatCloseBtn = document.getElementById('chat-close-btn');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+    if (chatToggleBtn && chatPopup) {
+        chatToggleBtn.addEventListener('click', () => {
+            chatPopup.style.display = chatPopup.style.display === 'block' ? 'none' : 'block';
+            if (chatPopup.style.display === 'block') {
+                chatInput.focus();
+            }
+        });
+    }
+    if (chatCloseBtn && chatPopup) {
+        chatCloseBtn.addEventListener('click', () => {
+            chatPopup.style.display = 'none';
+        });
+    }
+    if (chatForm && chatMessages) {
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userMsg = chatInput.value.trim();
+            if (userMsg) {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'chat-msg chat-msg-user';
+                userDiv.textContent = userMsg;
+                chatMessages.appendChild(userDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                setTimeout(() => {
+                    const botDiv = document.createElement('div');
+                    botDiv.className = 'chat-msg chat-msg-bot';
+                    botDiv.textContent = 'Gracias por tu mensaje. Pronto un asesor te responderá.';
+                    chatMessages.appendChild(botDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 900);
+                chatInput.value = '';
+            }
+        });
+    }
+    </script>
+</body>
+</html>
