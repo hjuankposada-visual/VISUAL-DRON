@@ -34,7 +34,6 @@
       background-color: white;
       border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      display: none;
       z-index: 1000;
       border-radius: 8px;
       overflow: hidden;
@@ -54,6 +53,7 @@
       padding: 15px;
       flex: 1;
       overflow-y: auto;
+      height: 300px;
     }
 
     .chat-input {
@@ -79,10 +79,8 @@
 </head>
 <body>
 
-  <!-- Botón flotante para abrir/cerrar el chat -->
   <button id="chat-toggle-btn">💬 Chat</button>
 
-  <!-- Ventana flotante del chat -->
   <div id="chat-popup">
     <div class="chat-header">Chat con nosotros</div>
     <div class="chat-body" id="chat-body">
