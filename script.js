@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Chat flotante: abrir/cerrar
+    const chatToggle = document.getElementById('chat-toggle-btn');
+    const chatPopup = document.getElementById('chat-popup');
+    if (chatToggle && chatPopup) {
+        chatToggle.addEventListener('click', () => {
+            if (chatPopup.style.display === 'block') {
+                chatPopup.style.display = 'none';
+            } else {
+                chatPopup.style.display = 'block';
+            }
+        });
+        // Cerrar chat al hacer click fuera
+        document.addEventListener('click', (e) => {
+            if (!chatPopup.contains(e.target) && e.target !== chatToggle) {
+                chatPopup.style.display = 'none';
+            }
+        });
+    }
     // Texto de bienvenida dinámico en explorador
     const bienvenida = document.getElementById('bienvenida-explorador');
     if (bienvenida) {
