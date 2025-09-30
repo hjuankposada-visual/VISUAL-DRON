@@ -43,54 +43,46 @@
                 <span style="font-size:1.3em;">💬</span>
             </button>
             <div class="chat-popup" id="chat-popup">
-                <div class="chat-popup-header">
-                    <span>VisualDron</span>
-                </div>
-                <div class="chat-popup-body">
-                    <p>¡Hola! ¿En qué podemos ayudarte?</p>
-                </div>
-            </div>
+        <div class="chat-popup-header">
+          <span>VisualDron</span>
         </div>
+        <div class="chat-popup-body">
+          <p>¡Hola! ¿En qué podemos ayudarte?</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <script>
+    // Funciones del proyecto
+    function mostrarHora() {
+      const horaActual = new Date().toLocaleTimeString('es-ES');
+      alert("Hora actual: " + horaActual);
+    }
+
+    function cambiarTamaño() {
+      document.querySelector('.contenedor').style.fontSize = "24px";
+    }
+
+    // Funcionalidad del chat flotante
+    document.addEventListener('DOMContentLoaded', () => {
+      const chatToggle = document.getElementById('chat-toggle-btn');
+      const chatPopup = document.getElementById('chat-popup');
+
+      if (chatToggle && chatPopup) {
+        chatToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isVisible = chatPopup.style.display === 'block';
+          chatPopup.style.display = isVisible ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!chatPopup.contains(e.target) && e.target !== chatToggle) {
+            chatPopup.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primer JavaScript</title>
-    <style>
-        .contenedor {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .contenedor img {
-            width: 120px; /* Ajusta el tamaño de la imagen */
-            border-radius: 12px; /* Bordes redondeados */
-        }
-    </style>
-</head>
-<body>
-    <div class="contenedor">
-        <!-- Aquí agregamos tu imagen -->
-        <img src="documentodiana.png" alt="Imagen de ejemplo">
-        <h1>Mi Proyecto de Encuestas</h1>
-    </div>
-
-    <!-- Aquí seguiría tu código JavaScript o más contenido -->
-    <script>
-        function mostrarHora() {
-            const horaActual = new Date().toLocaleTimeString('es-ES');
-            alert("Hora actual: " + horaActual);
-        }
-
-        function cambiarTamaño() {
-            document.querySelector('.contenedor').style.fontSize = "24px";
-        }
-    </script>
-</body>
-</html>
-
-
