@@ -1,181 +1,138 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Chat flotante: abrir/cerrar
-    const chatToggle = document.getElementById('chat-toggle-btn');
-    const chatPopup = document.getElementById('chat-popup');
-    if (chatToggle && chatPopup) {
-        chatToggle.addEventListener('click', () => {
-            if (chatPopup.style.display === 'block') {
-                chatPopup.style.display = 'none';
-            } else {
-                chatPopup.style.display = 'block';
-            }
-        });
-        // Cerrar chat al hacer click fuera
-        document.addEventListener('click', (e) => {
-            if (!chatPopup.contains(e.target) && e.target !== chatToggle) {
-                chatPopup.style.display = 'none';
-            }
-        });
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Flotante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    // Texto de bienvenida dinámico en explorador
-    const bienvenida = document.getElementById('bienvenida-explorador');
-    if (bienvenida) {
-        bienvenida.textContent = 'Ven y conoce todo sobre "VISUALDRON"';
-        bienvenida.style.opacity = '0';
-        bienvenida.style.transform = 'translateY(-20px)';
-        setTimeout(() => {
-            bienvenida.style.transition = 'opacity 0.8s, transform 0.8s';
-            bienvenida.style.opacity = '1';
-            bienvenida.style.transform = 'translateY(0)';
-        }, 300);
-    }
-    // Tooltips para los botones del menú
-    const menuBtns = document.querySelectorAll('.menu-btn');
-    menuBtns.forEach(btn => {
-        const tooltipText = btn.getAttribute('data-tooltip');
-        if (tooltipText) {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'menu-btn-tooltip';
-            tooltip.innerText = tooltipText;
-            btn.appendChild(tooltip);
-            btn.addEventListener('mouseenter', () => {
-                tooltip.style.opacity = '1';
-            });
-            btn.addEventListener('mouseleave', () => {
-                tooltip.style.opacity = '0';
-            });
-            btn.addEventListener('focus', () => {
-                tooltip.style.opacity = '1';
-            });
-            btn.addEventListener('blur', () => {
-                tooltip.style.opacity = '0';
-            });
-        }
-    });
-    // Funcionalidad para el botón de la tarjeta
-    const cardButton = document.querySelector('.card button');
-    if(cardButton) {
-        cardButton.addEventListener('click', () => {
-            window.location.href = 'explorador.html';
-        });
-    }
-    // Barra de marcas dinámica con alternancia de color
-    const marcas = [
-        "REIF", "DOLESE", "DIRKS ENTERPRISES", "Lhoist", "STEAX CONSULTING", "GRÖSCHLER", "LOUIS AND",
-        "DJI", "Parrot", "Yuneec", "Trimble", "Topcon", "Leica Geosystems", "Caterpillar", "Komatsu"
-    ];
-    const colores = [
-        "#0ca3c9", "#ffe600", "#2a4d7c", "#6b5d15", "#ebe3e3", "#d1e2c4", "#f10bc7ff", "#fffbe6"
-    ];
-    const fuentes = [
-        "marca-fuente-1", "marca-fuente-2", "marca-fuente-3", "marca-fuente-4"
-    ];
-    let marcaIndex = 0;
-    const textoMarca = document.getElementById('texto-marca-dinamico');
-    const barraMarcas = document.querySelector('.barra-marcas');
-    if (textoMarca && barraMarcas) {
-        setInterval(() => {
-            textoMarca.textContent = marcas[marcaIndex];
-            barraMarcas.style.background = colores[marcaIndex % colores.length];
-            // Alterna la clase de fuente/sombra
-            fuentes.forEach(f => textoMarca.classList.remove(f));
-            textoMarca.classList.add(fuentes[marcaIndex % fuentes.length]);
-            marcaIndex = (marcaIndex + 1) % marcas.length;
-        }, 1800);
-    }
-    // FAQ desplegable con flecha
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const answer = btn.nextElementSibling;
-            const isOpen = answer.classList.contains('faq-visible');
-            // Cierra todas las respuestas excepto la actual
-            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('faq-visible'));
-            document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('faq-open'));
-            if (!isOpen) {
-                answer.classList.add('faq-visible');
-                btn.classList.add('faq-open');
-            }
-        });
-    });
 
-    // Formulario con mensaje de éxito
-    const form = document.getElementById('form-contacto');
-    const modalBg = document.getElementById('modal-exito-bg');
-    const modalBtn = document.getElementById('modal-exito-btn');
-    if (form && modalBg && modalBtn) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            modalBg.classList.add('visible');
-            this.reset();
-        });
-        modalBtn.addEventListener('click', function() {
-            modalBg.classList.remove('visible');
-        });
+    #chat-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      cursor: pointer;
+      z-index: 1001;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-    // Formulario de registro empresa/cliente
-    const tipoUsuario = document.getElementById('tipo-usuario');
-    const camposEmpresa = document.getElementById('campos-empresa');
-    const camposCliente = document.getElementById('campos-cliente');
-    const formRegistro = document.getElementById('form-registro');
-    const mensajeRegistro = document.getElementById('mensaje-registro');
-    const idEmpresa = document.getElementById('id-empresa');
-    if (idEmpresa) {
-        idEmpresa.setAttribute('maxlength', '4');
-        idEmpresa.setAttribute('pattern', '\\d{1,4}');
-        idEmpresa.addEventListener('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);
-        });
+
+    #chat-popup {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1000;
+      border-radius: 8px;
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
     }
-    if (tipoUsuario && camposEmpresa && camposCliente) {
-        tipoUsuario.addEventListener('change', function() {
-            if (this.value === 'empresa') {
-                camposEmpresa.style.display = 'block';
-                camposCliente.style.display = 'none';
-            } else {
-                camposEmpresa.style.display = 'none';
-                camposCliente.style.display = 'block';
-            }
-        });
+
+    .chat-header {
+      background-color: #0078d7;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
     }
-    if (formRegistro && mensajeRegistro) {
-        formRegistro.addEventListener('submit', function(e) {
-            if (tipoUsuario.value === 'empresa') {
-                if (!idEmpresa.value.match(/^\d{1,4}$/)) {
-                    mensajeRegistro.style.display = 'block';
-                    mensajeRegistro.textContent = 'El ID debe ser numérico y máximo de 4 dígitos.';
-                    e.preventDefault();
-                    return;
-                }
-            }
-            e.preventDefault();
-            mensajeRegistro.style.display = 'block';
-            mensajeRegistro.textContent = '¡Registro exitoso!';
-            setTimeout(function(){
-                window.location.href = 'index.html';
-            }, 1200);
-            formRegistro.reset();
-            camposEmpresa.style.display = 'none';
-            camposCliente.style.display = 'none';
-        });
+
+    .chat-body {
+      padding: 15px;
+      flex: 1;
+      overflow-y: auto;
     }
-    // Mejor experiencia al enviar encuesta
-    const formEncuesta = document.getElementById('form-encuesta');
-    if (formEncuesta) {
-        formEncuesta.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const mensaje = document.getElementById('mensaje-encuesta');
-            if (mensaje) {
-                mensaje.innerHTML = '<div class="agradecimiento-encuesta">Encuesta enviada. ¡Gracias por participar!</div>';
-                mensaje.style.display = 'block';
-            }
-            formEncuesta.style.display = 'none';
-            setTimeout(() => {
-                if (mensaje) {
-                    mensaje.style.display = 'none';
-                }
-                formEncuesta.reset();
-                formEncuesta.style.display = 'block';
-            }, 2000);
-        });
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
     }
-});
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .chat-input button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón flotante para abrir/cerrar el chat -->
+  <button id="chat-toggle-btn">💬 Chat</button>
+
+  <!-- Ventana flotante del chat -->
+  <div id="chat-popup">
+    <div class="chat-header">Chat con nosotros</div>
+    <div class="chat-body" id="chat-body">
+      <p>Hola 👋 ¿En qué podemos ayudarte?</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
+      <button id="chat-send">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const chatToggle = document.getElementById('chat-toggle-btn');
+      const chatPopup = document.getElementById('chat-popup');
+      const chatInput = document.getElementById('chat-input');
+      const chatSend = document.getElementById('chat-send');
+      const chatBody = document.getElementById('chat-body');
+
+      // Abrir/cerrar chat
+      chatToggle.addEventListener('click', () => {
+        chatPopup.style.display = chatPopup.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Cerrar chat al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (!chatPopup.contains(e.target) && e.target !== chatToggle) {
+          chatPopup.style.display = 'none';
+        }
+      });
+
+      // Enviar mensaje
+      chatSend.addEventListener('click', () => {
+        const message = chatInput.value.trim();
+        if (message !== '') {
+          const userMsg = document.createElement('p');
+          userMsg.textContent = `Tú: ${message}`;
+          chatBody.appendChild(userMsg);
+          chatInput.value = '';
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      });
+
+      // Enviar con Enter
+      chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          chatSend.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
